@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="nx584"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <thing-type id="nx584">
+        <label>NX584 Security Panel</label>
+        <description>NX584 / Caddx / Networx Security System Binding</description>
+
+        <config-description>
+            <parameter name="port" type="text" required="true">
+                <label>Serial port device name</label>
+                <description>RS-232 serial port device name. E.g. /dev/ttyUSB0 or COM1:</description>
+            </parameter>
+            <parameter name="baudrate" type="integer" min="110">
+                <label>Serial port baud rate</label>
+                <description>Serial port baud rate.</description>
+                <default>38400</default>
+            </parameter>
+            <parameter name="zones" type="integer" min="1" max="64">
+                <label>Number of zones</label>
+                <description>Number of valid zones in security panel. 
+                This is used only for automatic initialization on startup and in zone status queries. 
+                Increase this if your panel has more than 24 zones.</description>
+                <default>32</default>
+            </parameter>
+        </config-description>
+    </thing-type>
+
+</thing:thing-descriptions>
