@@ -60,3 +60,28 @@ sendCommand(securityPanel, "armStayMode")
 sendCommand(securityPanel, "disarm")
 sendCommand(securityPanel, "setClock")
 ```
+
+## Sample Rules
+
+```
+rule "arm"
+when 
+	Item nx584arm changed from OFF to ON
+then
+	sendCommand(securityPanel, "arm")
+end
+
+rule "disarm"
+when 
+	Item nx584arm changed from ON to OFF
+then
+	sendCommand(securityPanel, "disarm")
+end
+
+rule "clock"
+when 
+	Item nx584clock changed from OFF to ON
+then
+	sendCommand(securityPanel, "setClock")
+end
+```
