@@ -2,13 +2,17 @@
 
 This is an OpenHAB 2 binding the NX584E security panel with RS-232 interface.
 
+To install, either build from source or copy target/org.openhab.binding.nx584-2.0.0-SNAPSHOT.jar to the addons folder of your OpenHAB 2 installation.
+
 If you get an error in the log about gnu.io not available, install it as follows from the osgi console:
 
+```
 $ ssh openhab@localhost -p 8101
 > feature:install openhab-transport-serial
 > feature:install openhab-runtime-compat1x (not needed for this binding)
 > logout
 $ sudo service openhab2 restart
+```
 
 ## Thing Declaration
 
