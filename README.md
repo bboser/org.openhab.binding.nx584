@@ -1,6 +1,8 @@
 # NX584E / Caddx / Networx Alarm Binding
 
-This is an OpenHAB 2 binding the NX584E security panel with RS-232 interface.
+This is an OpenHAB 2 binding the NX584E security panel with RS-232 interface. I use this with a raspberry pi 3 and connect to the panel via a USB to RS-232 cable. 
+
+Note that the NX584X has a male connector. Get an appropriate cable (I tested with a "DTECH 10 ft USB to RS232 DB9 Female Serial Port Adapter Cable with FTDI Chipset" but expect others will work, too) or a null-modem.
 
 To install, either build from source or copy target/org.openhab.binding.nx584-2.0.0-SNAPSHOT.jar to the addons folder of your OpenHAB 2 installation.
 
